@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Lorenzo Ventrice</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/portfolio.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logoventri_giusto.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body class="pagina-portfolio">
+
+    <!-- HEADER -->
+    <header class="site-header"> 
+        <a href="index.html" class="logo-link">
+            <img src="logoventri_giusto.png" alt="Logo Lorenzo Ventrice" class="logo-sito">
+        </a>
+        <div class="testo-header">
+            <h1>IL MIO PORTFOLIO</h1>
+            <h2>Web Design • Scacchi • Calcio</h2>
+        </div>
+    </header>
+
+    <!-- NAVIGAZIONE -->
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="ti ti-home"></i>Home</a></li>
+            <li class="active"><a href="portfolio.html"><i class="ti ti-briefcase"></i>Portfolio</a></li>
+            <li><a href="materie.html"><i class="ti ti-book"></i>Materie</a></li>
+            <li><a href="contatti.html"><i class="ti ti-mail"></i>Contatti</a></li>
+
+            <li class="theme-toggle-item">
+              <label class="theme-switch" title="Cambia tema">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider-track">
+                  <span class="slider-thumb">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                  </span>
+                </span>
+              </label>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- INTRODUZIONE PORTFOLIO -->
+    <section class="portfolio-intro">
+        <h1>I Miei Progetti</h1>
+        <p>Benvenuto nel mio portfolio! Qui trovi una selezione dei miei lavori e passioni. 
+           Esplora le diverse categorie cliccando sui filtri qui sotto.</p>
+    </section>
+
+    <!-- FILTRI CSS (Checkbox Hack) -->
+    <section class="filtri-portfolio">
+        <input type="radio" name="filtro" id="tutto" checked>
+        <input type="radio" name="filtro" id="filtro-web">
+        <input type="radio" name="filtro" id="filtro-scacchi">
+        <input type="radio" name="filtro" id="filtro-calcio">
+
+        <div class="bottoni-filtro">
+            <label for="tutto" class="btn-filtro">Tutto</label>
+            <label for="filtro-web" class="btn-filtro">Web & Tech</label>
+            <label for="filtro-scacchi" class="btn-filtro">Scacchi</label>
+            <label for="filtro-calcio" class="btn-filtro">Calcio</label>
+        </div>
+
+        <!-- GRIGLIA PROGETTI - 2 COLONNE × 3 RIGHE -->
+        <div class="griglia-progetti">
+
+            <!-- RIGA 1: Web -->
+            <article class="progetto web" id="web-design">
+                <div class="progetto-immagine">
+                    <div class="placeholder-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span>🎨</span>
+                    </div>
+                    <div class="progetto-overlay">
+                        <a href="#" class="btn-vai">Vedi Progetto</a>
+                    </div>
+                </div>
+                <div class="progetto-info">
+                    <h3>Sito Personale</h3>
+                    <span class="categoria">Web Design</span>
+                    <p>Design e sviluppo del mio sito personale con HTML5, CSS3 e calendario interattivo.</p>
+                    <div class="tag">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Responsive</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="progetto web" id="web-dev">
+                <div class="progetto-immagine">
+                    <div class="placeholder-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span>💻</span>
+                    </div>
+                    <div class="progetto-overlay">
+                        <a href="file:///C:/Users/lollo/OneDrive/scuola/Materie/Tpsit/HTML/Sito%20Classe%203E/index.html" class="btn-vai" target="_blank">Vedi Progetto</a>
+                    </div>
+                </div>
+                <div class="progetto-info">
+                    <h3>Sito della Classe</h3>
+                    <span class="categoria">Web Development</span>
+                    <p>Sito html contenente tutti i lavori svolti della classe e tutte le sue caratteristiche.</p>
+                    <div class="tag">
+                        <span>CSS Grid</span>
+                        <span>Flexbox</span>
+                        <span>UI Design</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- RIGA 2: Scacchi -->
+            <article class="progetto scacchi" id="scacchi">
+                <div class="progetto-immagine">
+                    <div class="placeholder-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span>♟️</span>
+                    </div>
+                    <div class="progetto-overlay">
+                        <a href="https://www.google.com/search?q=ventrice+lorenzo&oq=ventrice+lorenzo+&gs_lcrp=EgZjaHJvbWUyCggAEEUYFhgeGDkyCAgBEAAYFhgeMgcIAhAAGO8FMgoIAxAAGIAEGKIEMgoIBBAAGIAEGKIEMgoIBRAAGIAEGKIEMgcIBhAAGO8FMgYIBxBFGD3SAQk2NDIwajBqMTWoAgiwAgHxBTPsqGr_H1Ax&sourceid=chrome&ie=UTF-8" class="btn-vai" target="_blank">Vedi Dettagli</a>
+                    </div>
+                </div>
+                <div class="progetto-info">
+                    <h3>Campionato Regionale U18</h3>
+                    <span class="categoria">Scacchi</span>
+                    <p>6 titoli consecutivi di campione regionale Under 18. Record personale nella categoria.</p>
+                    <div class="tag">
+                        <span>6× Campione</span>
+                        <span>U18</span>
+                        <span>Sardegna</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="progetto scacchi">
+                <div class="progetto-immagine">
+                    <div class="placeholder-img" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <span>🏆</span>
+                    </div>
+                    <div class="progetto-overlay">
+                        <a href="https://www.linkoristano.it/2025/06/03/francesco-sonis-trionfa-nel-campionato-regionale-assoluto-di-scacchi-2025/" class="btn-vai" target="_blank">Vedi Dettagli</a>
+                    </div>
+                </div>
+                <div class="progetto-info">
+                    <h3>Vice-Campione Regionale Assoluto</h3>
+                    <span class="categoria">Scacchi</span>
+                    <p>Attuale vice-campione regionale assoluto (tutte le categorie ed età).</p>
+                    <div class="tag">
+                        <span>Vice-Campione</span>
+                        <span>Assoluto</span>
+                        <span>2026</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- RIGA 3: Scacchi (Serie A Red Tal) + Calcio (Arborea) -->
+            <article class="progetto scacchi">
+                <div class="progetto-immagine">
+                    <div class="placeholder-img" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <span>⚔️</span>
+                    </div>
+                    <div class="progetto-overlay">
+                        <a href="https://www.federscacchi.com/fsi/index.php/eventi/cis" class="btn-vai" target="_blank">Vedi Dettagli</a>
+                    </div>
+                </div>
+                <div class="progetto-info">
+                    <h3>Red Tal - Serie A Scacchi</h3>
+                    <span class="categoria">Scacchi</span>
+                    <p>Prima squadra dell'associazione Red Tal, militante nel campionato italiano di Serie A a squadre.</p>
+                    <div class="tag">
+                        <span>Serie A</span>
+                        <span>Prima Squadra</span>
+                        <span>CIS</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CALCIO - ARBOREA -->
+            <article class="progetto calcio" id="calcio">
+                <div class="progetto-immagine">
+                    <div class="placeholder-img" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <span>⚽</span>
+                    </div>
+                    <div class="progetto-overlay">
+                        <a href="https://www.tuttocampo.it/Sardegna/Under18Regionali/GironeUnico/Giocatore/Scheda/10123844/Carriera" class="btn-vai" target="_blank">Vedi Dettagli</a>
+                    </div>
+                </div>
+                <div class="progetto-info">
+                    <h3>Arborea - Juniores U19</h3>
+                    <span class="categoria">Calcio</span>
+                    <p>Giocatore fuoriquota nel campionato Juniores regionale Under 19. Dedizione e crescita continua.</p>
+                    <div class="tag">
+                        <span>Juniores</span>
+                        <span>Fuoriquota</span>
+                        <span>U19</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- STATISTICHE -->
+    <section class="statistiche">
+        <div class="stat-box">
+            <span class="numero">6</span>
+            <span class="etichetta">Titoli Regionali U18</span>
+        </div>
+        <div class="stat-box">
+            <span class="numero">1°</span>
+            <span class="etichetta">Serie A Scacchi</span>
+        </div>
+        <div class="stat-box">
+            <span class="numero">3°</span>
+            <span class="etichetta">Superiore ITIS</span>
+        </div>
+        <div class="stat-box">
+            <span class="numero">U19</span>
+            <span class="etichetta">Juniores Arborea</span>
+        </div>
+    </section>
+
+   <footer>
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-nome">Lorenzo Ventrice</div>
+        <div class="footer-sub">Studente · Scacchista · Sviluppatore</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/_lorenzooventrice_/" target="_blank" title="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="https://github.com/ventri9" target="_blank" title="GitHub"><i class="ti ti-brand-github"></i></a>
+          <a href="mailto:ventrice.lorenzo.10642@itisothoca.edu.it" target="_blank" title="Email di scuola"><i class="ti ti-mail"></i></a>
+          <a href="tel:3701389553" title="Telefono"><i class="ti ti-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Navigazione</p>
+        <ul>
+          <li><a href="index.html"><i class="ti ti-home"></i>Home</a></li>
+          <li><a href="portfolio.html"><i class="ti ti-briefcase"></i>Portfolio</a></li>
+          <li><a href="materie.html"><i class="ti ti-book"></i>Materie</a></li>
+          <li><a href="contatti.html"><i class="ti ti-mail"></i>Contatti</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Contatti</p>
+        <div class="footer-contact-row"><i class="ti ti-mail"></i><a href="mailto:ventricelorenzo2@gmail.com">ventricelorenzo2@gmail.com</a></div>
+        <div class="footer-contact-row"><i class="ti ti-phone"></i><a href="tel:3701389553">3701389553</a></div>
+        <div class="footer-contact-row"><i class="ti ti-map-pin"></i><a href="https://www.google.com/maps/place/09098+Terralba+OR/@39.7214763,8.6371461,15z/data=!3m1!4b1!4m6!3m5!1s0x12dd8641cb5e70ef:0x3af523fab2f1d8db!8m2!3d39.7185778!4d8.6338041!16zL20vMGdyMTd0?entry=ttu&g_ep=EgoyMDI2MDUyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Terralba, Sardegna</a></div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Impegni di Maggio</p>
+        <div class="footer-impegni">
+          <div class="footer-impegno-item">
+            <span class="footer-impegno-data">30–31</span>
+            <span class="footer-impegno-testo">Campionato Regionale Assoluto — Oristano</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lorenzo Ventrice · no copyright</span>
+      <span>ITIS Othoca — Indirizzo Informatico</span>
+    </div>
+  </footer>
+
+  <button id="scroll-top" class="scroll-top-btn" title="Torna su">
+    <i class="ti ti-arrow-up"></i>
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById('scroll-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+    <script src="tema.js"></script>
+</body>
+</html>

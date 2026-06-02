@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+ <head>
+  <meta charset="UTF-8">
+  <title>Il mio sito - Lorenzo Ventrice</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://i.ibb.co/gLrB1Wms/logoventri-giusto.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+ </head>
+ <body>
+
+  <header class="site-header"> 
+    <img src="https://i.ibb.co/gLrB1Wms/logoventri-giusto.png" alt="Logo Lorenzo Ventrice" class="logo-sito">
+    <div class="testo-header">
+        <h1>IL MIO SITO</h1>
+        <h2>Scopri la magica persona che sono!</h2>
+    </div>
+  </header>
+  
+  <nav>
+    <ul>
+      <li class="active"><a href="index.html"><i class="ti ti-home"></i>Home</a></li>
+      <li><a href="portfolio.html"><i class="ti ti-briefcase"></i>Portfolio</a></li>
+      <li><a href="materie.html"><i class="ti ti-book"></i>Materie</a></li>
+      <li><a href="contatti.html"><i class="ti ti-mail"></i>Contatti</a></li>
+      <li class="theme-toggle-item">
+        <label class="theme-switch" title="Cambia tema">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider-track">
+            <span class="slider-thumb">
+              <span class="icon-sun">☀️</span>
+              <span class="icon-moon">🌙</span>
+            </span>
+          </span>
+        </label>
+      </li>
+    </ul>
+  </nav>
+
+  <section>
+   <article> 
+     <header>
+          <h1>Chi sono?</h1>
+     </header>
+     <p>
+        Mi chiamo Lorenzo e vado in terza superiore, mi piace relazionare con le persone che ho attorno
+        e conoscere nuove persone, sono uno sportivo, mi piace tanto il calcio e giocare a scacchi, partecipo
+        a gare internazionali e mondiali e sono uno dei giocatori più forti della mia età in Italia, ho vinto 6
+        volte di fila il campionato regionale U18 e attualmente sono vice-campione regionale in tutte le categorie 
+        ed età. Faccio parte della prima squadra dell'associazione del Red Tal, militante in serie A, nel campionato
+        italiano. La mia settimana tipo è ricchissima di impegni tra compiti, studio e allenamenti, ogni giorno
+        lavoro e mi impegno per migliorare la mia persona il più possibile, frequento l'I.t.i.s. Othoca di Oristano
+        all' indirizzo informatico. In questo sito riporrò i miei impegni mensili, i miei traguardi e i miei obbiettivi.
+    </p>
+   </article>
+  </section>
+
+  <aside>
+    <div class="calendario-container">
+      <div class="calendario-header">
+        <button class="freccia" id="prev-mese">&#10094;</button>
+        <h1 id="nome-mese">Gennaio 2026</h1>
+        <button class="freccia" id="next-mese">&#10095;</button>
+      </div>
+      <div class="calendario-giorni-settimana">
+        <span>Lun</span><span>Mar</span><span>Mer</span><span>Gio</span><span>Ven</span><span>Sab</span><span>Dom</span>
+      </div>
+      <div class="calendario-griglia" id="griglia-giorni"></div>
+    </div>
+    <div class="eventi-dettaglio" id="eventi-dettaglio">
+      <h3>Eventi del giorno</h3>
+      <p id="testo-evento">Clicca su un giorno evidenziato per vedere i dettagli.</p>
+    </div>
+  </aside>
+
+  <!-- ===== SEZIONE ULTIMI AGGIORNAMENTI ===== -->
+  <section class="news-section">
+    <div class="news-title">
+      <i class="ti ti-news"></i>Ultimi aggiornamenti
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-badge badge-scacchi"><i class="ti ti-trophy"></i> Scacchi</span>
+          <div class="news-card-title">Campionato Regionale Assoluto</div>
+          <div class="news-card-desc">Titolo da difendere a Oristano il 30–31 Maggio. Lorenzo è tra i favoriti dopo 6 titoli consecutivi U18.</div>
+        </div>
+        <div class="news-card-bottom">
+          <span class="news-date"><i class="ti ti-calendar"></i> 30–31 Maggio 2026</span>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-badge badge-scacchi"><i class="ti ti-chess"></i> Scacchi</span>
+          <div class="news-card-title">Torneo Mondiale — Sardinia Chess Festival</div>
+          <div class="news-card-desc">Partecipazione al torneo internazionale di Orosei, una delle competizioni più importanti della stagione.</div>
+        </div>
+        <div class="news-card-bottom">
+          <span class="news-date"><i class="ti ti-calendar"></i> 3–10 Maggio 2026</span>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-top">
+          <span class="news-badge badge-scuola"><i class="ti ti-code"></i> Scuola</span>
+          <div class="news-card-title">Sito web completato — ITIS Othoca</div>
+          <div class="news-card-desc">Progetto personale sviluppato con HTML, CSS e JavaScript. Struttura completa con portfolio, materie e contatti.</div>
+        </div>
+        <div class="news-card-bottom">
+          <span class="news-date"><i class="ti ti-calendar"></i> Maggio 2026</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <footer>
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-nome">Lorenzo Ventrice</div>
+        <div class="footer-sub">Studente · Scacchista · Sviluppatore</div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/_lorenzooventrice_/" target="_blank" title="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="https://github.com/ventri9" target="_blank" title="GitHub"><i class="ti ti-brand-github"></i></a>
+          <a href="mailto:ventrice.lorenzo.10642@itisothoca.edu.it" target="_blank" title="Email di scuola"><i class="ti ti-mail"></i></a>
+          <a href="tel:3701389553" title="Telefono"><i class="ti ti-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Navigazione</p>
+        <ul>
+          <li><a href="index.html"><i class="ti ti-home"></i>Home</a></li>
+          <li><a href="portfolio.html"><i class="ti ti-briefcase"></i>Portfolio</a></li>
+          <li><a href="materie.html"><i class="ti ti-book"></i>Materie</a></li>
+          <li><a href="contatti.html"><i class="ti ti-mail"></i>Contatti</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Contatti</p>
+        <div class="footer-contact-row"><i class="ti ti-mail"></i><a href="mailto:ventricelorenzo2@gmail.com">ventricelorenzo2@gmail.com</a></div>
+        <div class="footer-contact-row"><i class="ti ti-phone"></i><a href="tel:3701389553">3701389553</a></div>
+        <div class="footer-contact-row"><i class="ti ti-map-pin"></i><a href="https://www.google.com/maps/place/09098+Terralba+OR/@39.7214763,8.6371461,15z/data=!3m1!4b1!4m6!3m5!1s0x12dd8641cb5e70ef:0x3af523fab2f1d8db!8m2!3d39.7185778!4d8.6338041!16zL20vMGdyMTd0?entry=ttu&g_ep=EgoyMDI2MDUyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Terralba, Sardegna</a></div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-title">Impegni di Maggio</p>
+        <div class="footer-impegni">
+          <div class="footer-impegno-item">
+            <span class="footer-impegno-data">30–31</span>
+            <span class="footer-impegno-testo">Campionato Regionale Assoluto — Oristano</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Lorenzo Ventrice · no copyright</span>
+      <span>ITIS Othoca — Indirizzo Informatico</span>
+    </div>
+  </footer>
+
+  <button id="scroll-top" class="scroll-top-btn" title="Torna su">
+    <i class="ti ti-arrow-up"></i>
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById('scroll-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <script src="calendario.js"></script>
+  <script src="tema.js"></script>
+ </body>
+</html>
