@@ -2,6 +2,7 @@
 <html lang="it">
  <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il mio sito - Lorenzo Ventrice</title>
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://i.ibb.co/gLrB1Wms/logoventri-giusto.png">
@@ -18,11 +19,17 @@
   </header>
   
   <nav>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
     <ul>
-      <li class="active"><a href="index.html"><i class="ti ti-home"></i>Home</a></li>
-      <li><a href="portfolio.html"><i class="ti ti-briefcase"></i>Portfolio</a></li>
-      <li><a href="materie.html"><i class="ti ti-book"></i>Materie</a></li>
-      <li><a href="contatti.html"><i class="ti ti-mail"></i>Contatti</a></li>
+      <li class="active"><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
+      <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
+      <li><a href="materie.html"><i class="ti ti-book"></i><span>Materie</span></a></li>
+      <li><a href="contatti.html"><i class="ti ti-mail"></i><span>Contatti</span></a></li>
       <li class="theme-toggle-item">
         <label class="theme-switch" title="Cambia tema">
           <input type="checkbox" id="theme-toggle">
