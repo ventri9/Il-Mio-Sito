@@ -249,25 +249,23 @@ nav {
     }
     
     nav ul {
-        width: 0;
+        display: flex;
+        max-height: 0;
         overflow: hidden;
         flex-direction: column;
-        position: absolute;
-        top: 62px;
-        left: 0;
-        right: 0;
+        position: static;
+        width: 100%;
         background: #90EE90;
-        border-radius: 0 0 12px 12px;
+        border-radius: 0;
         gap: 0;
-        transition: width 0.3s ease;
+        transition: max-height 0.3s ease;
         box-sizing: border-box;
-        z-index: 1000;
+        padding: 0;
     }
     
     .menu-toggle:checked ~ ul {
-        width: 100%;
+        max-height: 500px;
         padding: 10px 0;
-        z-index: 1000;
     }
     
     nav ul li {
@@ -280,6 +278,8 @@ nav {
         padding: 12px 15px;
         border-radius: 0;
         font-size: 14px;
+        display: flex;
+        align-items: center;
     }
     
     nav ul li a span {
