@@ -11,6 +11,8 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #f4f4f4;
     transition: background-color 0.4s ease, color 0.4s ease;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 /* ============================================
@@ -100,27 +102,48 @@ footer {
    HEADER
    ============================================ */
 .site-header {
-    width: 1180px;
-    height: 150px;
+    width: calc(100% - 20px);
+    max-width: 1180px;
+    height: auto;
+    min-height: 150px;
     background-color: #90EE90;
     color: #1a3a1a;
     padding: 20px;
-    margin: 10px;
+    margin: 10px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     transition: background-color 0.4s ease, color 0.4s ease;
+    box-sizing: border-box;
 }
 
 .site-header img {
     width: auto;
     height: 150px;
+    max-width: 150px;
     flex-shrink: 0;
     object-fit: contain;
     border: none;
     margin: 0;
     margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .site-header img {
+        height: 100px;
+        max-width: 100px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header img {
+        height: 80px;
+        max-width: 80px;
+        margin-right: 10px;
+    }
 }
 
 .testo-header {
@@ -145,20 +168,142 @@ footer {
     font-weight: normal;
 }
 
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 22px;
+    }
+    .site-header h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .site-header img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .testo-header {
+        align-items: center;
+    }
+    .site-header h1 {
+        font-size: 18px;
+    }
+    .site-header h2 {
+        font-size: 14px;
+    }
+}
+
 /* ============================================
    NAV MODERNO
    ============================================ */
 nav {
-    width: 1180px;
-    height: 62px;
+    width: calc(100% - 20px);
+    max-width: 1180px;
+    height: auto;
+    min-height: 62px;
     background-color: #90EE90;
-    margin: 10px;
-    padding: 0 24px;
+    margin: 10px auto;
+    padding: 12px 10px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
     border-radius: 12px;
     display: flex;
     align-items: center;
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger-icon span {
+    width: 25px;
+    height: 3px;
+    background: #1a3a1a;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .hamburger-icon {
+        display: flex;
+        order: 1;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        width: 0;
+        overflow: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        right: 0;
+        background: #90EE90;
+        border-radius: 0 0 12px 12px;
+        gap: 0;
+        transition: width 0.3s ease;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+    
+    .menu-toggle:checked ~ ul {
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    
+    nav ul li {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    nav ul li a {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 0;
+        font-size: 14px;
+    }
+    
+    nav ul li a span {
+        margin-left: 8px;
+    }
+    
+    .theme-toggle-item {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 0;
+    }
+    
+    /* Animazione hamburger */
+    .menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
 }
 
 nav ul {
@@ -166,9 +311,39 @@ nav ul {
     padding: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 4px;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 2px;
+    }
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px auto;
+    }
+    nav ul {
+        justify-content: space-between;
+        width: 100%;
+    }
+    nav ul li a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+    nav ul li a i {
+        font-size: 14px;
+    }
 }
 
 nav ul li {
@@ -229,6 +404,26 @@ ul li ul {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 768px) {
+    ul li ul {
+        width: 180px;
+    }
+    ul li ul li a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    ul li ul {
+        position: fixed;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vw;
+        max-width: 250px;
+    }
+}
+
 ul li ul li {
     background: transparent;
     display: block;
@@ -272,6 +467,13 @@ ul li:hover ul {
     align-items: center;
     cursor: pointer;
     user-select: none;
+}
+
+@media (max-width: 480px) {
+    .theme-toggle-item {
+        margin-left: auto;
+        padding: 0 !important;
+    }
 }
 
 .theme-switch input {
@@ -342,7 +544,8 @@ ul li:hover ul {
    ARTICLE
    ============================================ */
 article {
-    width: 755px;
+    width: calc(65% - 20px);
+    max-width: none;
     min-height: 400px;
     float: left;
     background-color: #ffffff;
@@ -351,6 +554,38 @@ article {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #90EE90;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease, color 0.4s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    article {
+        width: calc(63% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    article {
+        width: calc(100% - 20px);
+        float: none;
+        margin: 10px auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    article {
+        width: calc(100% - 16px);
+        padding: 8px;
+        margin: 8px auto;
+        min-height: auto;
+    }
+    article h1 {
+        font-size: 20px;
+    }
+    article p {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
 
 article header {
@@ -383,10 +618,11 @@ article p {
    ASIDE
    ============================================ */
 aside {
-    width: 401px;
+    width: calc(35% - 20px);
+    max-width: none;
     height: auto;
     min-height: 400px;
-    float: left;
+    float: right;
     background-color: #e8f5e9;
     padding: 10px;
     margin: 10px;
@@ -394,6 +630,32 @@ aside {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+    aside {
+        width: calc(37% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: calc(100% - 20px);
+        float: none;
+        margin: 10px auto;
+        max-width: 100%;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    aside {
+        width: calc(100% - 16px);
+        padding: 8px;
+        margin: 8px auto;
+        min-height: auto;
+    }
 }
 
 /* ============================================
@@ -406,6 +668,13 @@ aside {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     flex-shrink: 0;
     transition: background-color 0.4s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .calendario-container {
+        padding: 8px;
+    }
 }
 
 .calendario-header {
@@ -568,9 +837,24 @@ aside {
    ============================================ */
 .news-section {
     clear: both;
-    width: 1180px;
-    margin: 10px;
-    margin-top: 460px;
+    width: calc(100% - 20px);
+    max-width: 1180px;
+    margin: 10px auto;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .news-section {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-section {
+        width: calc(100% - 16px);
+        margin: 8px auto;
+    }
 }
 
 .news-title {
@@ -578,10 +862,17 @@ aside {
     font-weight: 800;
     color: #2e7d32;
     margin-bottom: 14px;
-    margin-top: 180px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+@media (max-width: 480px) {
+    .news-title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
 }
 
 .news-title i {
@@ -603,6 +894,27 @@ aside {
     gap: 16px;
 }
 
+@media (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
 .news-card {
     background: #ffffff;
     border-radius: 12px;
@@ -615,6 +927,24 @@ aside {
 .news-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+@media (max-width: 480px) {
+    .news-card {
+        border-radius: 10px;
+    }
+    .news-card-top {
+        padding: 12px 12px 8px;
+    }
+    .news-card-title {
+        font-size: 14px;
+    }
+    .news-card-desc {
+        font-size: 12px;
+    }
+    .news-card-bottom {
+        padding: 8px 12px;
+    }
 }
 
 .news-card-top {
@@ -705,6 +1035,26 @@ aside {
     z-index: 1000;
 }
 
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-top-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
 .scroll-top-btn.visible {
     opacity: 1;
     visibility: visible;
@@ -738,13 +1088,30 @@ aside:hover,
    ============================================ */
 footer {
     clear: both;
-    width: 1180px;
-    margin: 10px;
+    width: calc(100% - 20px);
+    max-width: 1180px;
+    margin: 10px auto;
     margin-top: 50px;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
     transition: box-shadow 0.4s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 40px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        width: calc(100% - 16px);
+        margin: 8px auto;
+        margin-top: 30px;
+    }
 }
 
 .footer-top {
@@ -756,6 +1123,36 @@ footer {
     border-bottom: 3px solid #1a3a1a;
     align-items: center;
     transition: background-color 0.4s ease, border-color 0.4s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top {
+        padding: 15px 15px;
+        gap: 12px;
+    }
+    .footer-col-title {
+        font-size: 11px;
+    }
+    .footer-col ul li a {
+        font-size: 12px;
+    }
 }
 
 .footer-nome {
@@ -898,11 +1295,33 @@ footer {
     align-items: center;
     justify-content: space-between;
     transition: background-color 0.4s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-bottom {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
 }
 
 .footer-bottom span {
     font-size: 12px;
     color: #5a9a5a;
+}
+
+@media (max-width: 480px) {
+    .footer-bottom span {
+        font-size: 11px;
+    }
 }
 
 /* ============================================

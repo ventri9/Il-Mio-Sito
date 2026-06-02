@@ -2,16 +2,33 @@
     position: sticky;
     left: 0;
     z-index: 1000;
-    width: 1180px;          
+    width: calc(100% - 20px);
+    max-width: 1180px;
     margin-left: 10px;
     margin-right: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .sticky-orizzontale {
+        width: calc(100% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-orizzontale {
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
 
 .portfolio-intro {
-    width: 1180px;           
-    margin: 20px 10px;       
-    text-align: center;
+    width: calc(100% - 40px);
+    max-width: 1180px;
+    margin: 20px auto;
     padding: 40px 20px;
+    text-align: center;
     background: linear-gradient(135deg, #90EE90 0%, #76d275 100%);
     border-radius: 15px;
     color: #1a3a1a;
@@ -35,10 +52,41 @@
     line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+    .portfolio-intro {
+        padding: 30px 15px;
+        border-radius: 12px;
+    }
+    .portfolio-intro h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    .portfolio-intro p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-intro {
+        width: calc(100% - 20px);
+        margin: 15px auto;
+        padding: 20px 15px;
+    }
+    .portfolio-intro h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .portfolio-intro p {
+        font-size: 14px;
+    }
+}
+
 .sezione-portfolio {
-    width: 1180px;          
-    margin: 30px 10px;       
+    width: calc(100% - 20px);
+    max-width: 1180px;
+    margin: 30px auto;
     position: relative;
+    box-sizing: border-box;
 }
 
 .griglia-progetti {
@@ -49,6 +97,30 @@
     width: 100%;
 }
 
+@media (max-width: 1024px) {
+    .griglia-progetti {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .griglia-progetti {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sezione-portfolio {
+        width: calc(100% - 10px);
+        margin: 20px auto;
+    }
+    .griglia-progetti {
+        gap: 16px;
+    }
+}
+
 .sezione-header {
     padding: 25px 30px;
     border-radius: 15px;
@@ -56,21 +128,6 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     width: 100%;
     box-sizing: border-box;
-}
-
-.web-sezione .sezione-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #ffffff;
-}
-
-.scacchi-sezione .sezione-header {
-    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-    color: #ffffff;
-}
-
-.calcio-sezione .sezione-header {
-    background: linear-gradient(135deg, #e65100 0%, #ef6c00 100%);
-    color: #ffffff;
 }
 
 .sezione-header h2 {
@@ -85,6 +142,31 @@
     margin: 0;
     font-size: 16px;
     opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .sezione-header {
+        padding: 20px 15px;
+    }
+    .sezione-header h2 {
+        font-size: 22px;
+    }
+    .sezione-header p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sezione-header {
+        padding: 15px 12px;
+    }
+    .sezione-header h2 {
+        font-size: 18px;
+        gap: 8px;
+    }
+    .sezione-header p {
+        font-size: 12px;
+    }
 }
 
 .progetto {
@@ -214,12 +296,10 @@
 }
 
 .filtri-portfolio {
-    width: 1180px;
+    width: calc(100% - 20px);
+    max-width: 1180px;
     margin: 30px auto;
-}
-
-.filtri-portfolio input[type="radio"] {
-    display: none;
+    box-sizing: border-box;
 }
 
 .bottoni-filtro {
@@ -228,6 +308,31 @@
     gap: 15px;
     margin-bottom: 30px;
     flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .bottoni-filtro {
+        gap: 10px;
+    }
+    .btn-filtro {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filtri-portfolio {
+        width: calc(100% - 10px);
+    }
+    .bottoni-filtro {
+        gap: 8px;
+        justify-content: space-between;
+    }
+    .btn-filtro {
+        padding: 8px 15px;
+        font-size: 11px;
+        flex: 1 1 calc(50% - 4px);
+    }
 }
 
 .btn-filtro {
@@ -262,11 +367,14 @@
 }
 
 .statistiche {
-    width: 1180px; 
-    margin: 40px 10px;
+    width: calc(100% - 20px);
+    max-width: 1180px;
+    margin: 40px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .stat-box {
@@ -284,20 +392,41 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-.numero {
-    display: block;
-    font-size: 48px;
-    font-weight: bold;
-    color: #1a3a1a;
-    margin-bottom: 10px;
+@media (max-width: 1024px) {
+    .statistiche {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
-.etichetta {
-    display: block;
-    font-size: 14px;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+@media (max-width: 768px) {
+    .statistiche {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 30px auto;
+    }
+    .stat-box {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .statistiche {
+        width: calc(100% - 10px);
+        padding: 0 5px;
+        margin: 20px auto;
+        gap: 10px;
+    }
+    .stat-box {
+        padding: 20px 15px;
+    }
+    .numero {
+        font-size: 36px;
+    }
+    .etichetta {
+        font-size: 12px;
+    }
+}
 }
 
 .pagina-portfolio footer {
