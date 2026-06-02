@@ -310,6 +310,11 @@
     flex-wrap: wrap;
 }
 
+/* Nascondi i radio button */
+.filtri-portfolio input[type="radio"] {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .bottoni-filtro {
         gap: 10px;
@@ -364,6 +369,32 @@
     background: #1a3a1a;
     color: #ffffff;
     border-color: #1a3a1a;
+}
+
+/* FILTRAGGIO PROGETTI */
+/* Nascondi tutti i progetti di default */
+.filtri-portfolio .griglia-progetti .progetto {
+    display: none;
+}
+
+/* Mostra tutti i progetti quando "tutto" è selezionato */
+#tutto:checked ~ .griglia-progetti .progetto {
+    display: block;
+}
+
+/* Mostra solo progetti web quando filtro-web è selezionato */
+#filtro-web:checked ~ .griglia-progetti .progetto.web {
+    display: block;
+}
+
+/* Mostra solo progetti scacchi quando filtro-scacchi è selezionato */
+#filtro-scacchi:checked ~ .griglia-progetti .progetto.scacchi {
+    display: block;
+}
+
+/* Mostra solo progetti calcio quando filtro-calcio è selezionato */
+#filtro-calcio:checked ~ .griglia-progetti .progetto.calcio {
+    display: block;
 }
 
 .statistiche {
