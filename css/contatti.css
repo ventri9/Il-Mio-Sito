@@ -135,10 +135,54 @@
     padding-left: 15px;
 }
 
+form input,
+form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fafafa;
+    color: #333;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #90EE90;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(144, 238, 144, 0.15);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form input + input,
+form input + textarea {
+    margin-top: 0;
+}
+
 .input-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 @media (max-width: 1024px) {
@@ -171,23 +215,43 @@
     .mappa-placeholder span {
         font-size: 36px;
     }
+    form input,
+    form textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+    .btn-submit {
+        padding: 14px;
+        font-size: 15px;
+    }
+    .form-box form {
+        gap: 14px;
+    }
 }
 
 .btn-submit {
     width: 100%;
-    padding: 15px;
-    background: #1a3a1a;
-    color: white;
+    padding: 16px;
+    background: linear-gradient(135deg, #1a3a1a, #2e7d32);
+    color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 .btn-submit:hover {
-    background: #2e7d32;
+    background: linear-gradient(135deg, #2e7d32, #90EE90);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
 }
 
 .mappa-placeholder {
@@ -439,7 +503,7 @@ body.dark-theme form input,
 body.dark-theme form textarea {
     background: #0d2a0d;
     color: #e0e0e0;
-    border: 1px solid #2e7d32;
+    border-color: #2e7d32;
 }
 
 body.dark-theme form input::placeholder,
@@ -450,17 +514,19 @@ body.dark-theme form textarea::placeholder {
 body.dark-theme form input:focus,
 body.dark-theme form textarea:focus {
     border-color: #90EE90;
-    background-color: #0d2a0d;
+    background: #0d2a0d;
+    box-shadow: 0 0 0 4px rgba(144, 238, 144, 0.1);
 }
 
 body.dark-theme .btn-submit {
-    background: #2e7d32;
+    background: linear-gradient(135deg, #0d2a0d, #2e7d32);
     color: #ffffff;
 }
 
 body.dark-theme .btn-submit:hover {
-    background: #90EE90;
+    background: linear-gradient(135deg, #2e7d32, #90EE90);
     color: #1a3a1a;
+    box-shadow: 0 8px 20px rgba(144, 238, 144, 0.2);
 }
 
 body.dark-theme .mappa-placeholder {

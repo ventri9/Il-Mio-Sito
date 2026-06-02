@@ -403,41 +403,85 @@
     margin: 40px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
     padding: 0 10px;
     box-sizing: border-box;
 }
 
 .stat-box {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 50px 30px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    border-top: 4px solid #90EE90;
+    box-shadow: 0 8px 32px rgba(144, 238, 144, 0.15);
+    border: 2px solid #e8f5e9;
+    border-left: 6px solid #90EE90;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(144, 238, 144, 0.1), transparent);
+    border-radius: 50%;
+    pointer-events: none;
     transition: all 0.3s ease;
 }
 
 .stat-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 16px 48px rgba(144, 238, 144, 0.25);
+    border-color: #90EE90;
+}
+
+.stat-box:hover::before {
+    top: -20%;
+    right: -20%;
+    background: radial-gradient(circle, rgba(144, 238, 144, 0.2), transparent);
+}
+
+.numero {
+    display: block;
+    font-size: 58px;
+    font-weight: 900;
+    background: linear-gradient(135deg, #90EE90, #2e7d32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    letter-spacing: -2px;
+}
+
+.etichetta {
+    display: block;
+    font-size: 15px;
+    color: #666;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 @media (max-width: 1024px) {
     .statistiche {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .statistiche {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 16px;
         margin: 30px auto;
     }
     .stat-box {
-        padding: 30px 20px;
+        padding: 40px 25px;
     }
 }
 
@@ -446,16 +490,17 @@
         width: calc(100% - 10px);
         padding: 0 5px;
         margin: 20px auto;
-        gap: 10px;
+        gap: 12px;
     }
     .stat-box {
-        padding: 20px 15px;
+        padding: 30px 20px;
+        border-left-width: 5px;
     }
     .numero {
-        font-size: 36px;
+        font-size: 44px;
     }
     .etichetta {
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 }
@@ -593,16 +638,25 @@ body.dark-theme #filtro-calcio:checked ~ .bottoni-filtro label[for="filtro-calci
 }
 
 body.dark-theme .stat-box {
-    background: #1a3a1a;
-    border-top-color: #90EE90;
+    background: linear-gradient(135deg, #1a3a1a 0%, #0d2a0d 100%);
+    border-color: #2e7d32;
+    box-shadow: 0 8px 32px rgba(46, 125, 50, 0.15);
+}
+
+body.dark-theme .stat-box:hover {
+    box-shadow: 0 16px 48px rgba(144, 238, 144, 0.25);
+    border-color: #90EE90;
 }
 
 body.dark-theme .numero {
-    color: #90EE90;
+    background: linear-gradient(135deg, #90EE90, #66bb6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 body.dark-theme .etichetta {
-    color: #c8e6c9;
+    color: #a5d6a7;
 }
 
 /* ============================================

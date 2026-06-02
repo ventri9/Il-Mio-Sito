@@ -1047,11 +1047,11 @@ aside {
 
 @media (max-width: 480px) {
     .scroll-top-btn {
-        bottom: 15px;
-        right: 15px;
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
     }
 }
 
