@@ -309,18 +309,14 @@ ul li:hover ul {
     visibility: visible;
 }
 
-/* Toggle in fondo, separato, non sovrapposto alla X */
 .theme-toggle-item {
-        width: 100% !important;
-        margin-left: 0 !important;
-        padding: 10px 15px !important;
-        padding-right: 15px !important; /* AGGIUNTO: Sposta lo switch verso sinistra allontanandolo dal bordo */
-        border-top: 1px solid rgba(26, 58, 26, 0.2);
-        margin-top: 4px;
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
-    }
+    margin-left: auto;
+    background: transparent !important;
+    padding: 0 4px !important;
+    cursor: default !important;
+    display: flex;
+    align-items: center;
+}
 .theme-toggle-item:hover {
     background: transparent !important;
 }
