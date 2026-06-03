@@ -314,7 +314,7 @@ ul li:hover ul {
     width: 100% !important;
     margin-left: 0 !important;
     padding: 10px 15px !important;
-    padding-right: 15px !important; /* AGGIUNTO: Sposta lo switch verso sinistra allontanandolo dal bordo */
+    padding-right: 45px !important; /* AGGIUNTO: Sposta lo switch verso sinistra allontanandolo dal bordo */
     border-top: 1px solid rgba(26, 58, 26, 0.2);
     margin-top: 4px;
     display: flex !important;
