@@ -1415,7 +1415,7 @@ body.dark-theme .scroll-top-btn:hover {
 
     /* Link del menù aperto: sfondo scuro, testo chiaro */
     body.dark-theme nav ul li a {
-        background: rgba(0, 0, 0, 0.25);
+        background: #1e4620;
         color: #a5d6a7;
     }
     body.dark-theme nav ul li a:hover {
@@ -1424,7 +1424,7 @@ body.dark-theme .scroll-top-btn:hover {
     }
     body.dark-theme nav ul li.active a {
         background: #90EE90;
-        color: #1e4620;
+        color: #1a3a1a;
     }
 
     /* Toggle in fondo scuro: bordo e label adattati */
