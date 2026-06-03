@@ -24,29 +24,35 @@
 
     <!-- NAVIGAZIONE -->
     <nav>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <ul>
-            <li><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
-            <li class="active"><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
-            <li><a href="materie.html"><i class="ti ti-book"></i><span>Materie</span></a></li>
-            <li><a href="contatti.html"><i class="ti ti-mail"></i><span>Contatti</span></a></li>
+        <!-- Logo testo per mobile -->
+        <div class="nav-mobile-brand">Il mio sito</div>
 
-            <li class="theme-toggle-item">
-              <label class="theme-switch" title="Cambia tema">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider-track">
-                  <span class="slider-thumb">
-                    <span class="icon-sun">☀️</span>
-                    <span class="icon-moon">🌙</span>
-                  </span>
+        <!-- Checkbox nascosta per toggle hamburger -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- Icona hamburger -->
+        <label for="menu-toggle" class="hamburger-icon" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+
+        <ul>
+        <li class="active"><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
+        <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
+        <li><a href="materie.html"><i class="ti ti-book"></i><span>Materie</span></a></li>
+        <li><a href="contatti.html"><i class="ti ti-mail"></i><span>Contatti</span></a></li>
+        <li class="theme-toggle-item">
+            <label class="theme-switch" title="Cambia tema">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider-track">
+                <span class="slider-thumb">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
                 </span>
-              </label>
-            </li>
+            </span>
+            </label>
+        </li>
         </ul>
     </nav>
 
