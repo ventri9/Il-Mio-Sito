@@ -321,10 +321,6 @@ ul li:hover ul {
     align-items: center;
 }
 
-.theme-toggle-item .theme-switch {
-        margin-left: auto; /* Forza lo switch ad allinearsi al margine destro */
-    }
-    
 .theme-toggle-item:hover {
     background: transparent !important;
 }
