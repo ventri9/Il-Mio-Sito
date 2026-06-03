@@ -7,7 +7,8 @@
   <link href="css/style.css?v=2" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://i.ibb.co/gLrB1Wms/logoventri-giusto.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
- </head>
+ <base target="_blank">
+</head>
  <body>
 
   <header class="site-header"> 
@@ -17,9 +18,21 @@
         <h2>Scopri la magica persona che sono!</h2>
     </div>
   </header>
-  
+
   <nav>
-    
+    <!-- Logo testo per mobile -->
+    <div class="nav-mobile-brand">Il mio sito</div>
+
+    <!-- Checkbox nascosta per toggle hamburger -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <!-- Icona hamburger -->
+    <label for="menu-toggle" class="hamburger-icon" aria-label="Apri menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
     <ul>
       <li class="active"><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
       <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
@@ -116,7 +129,7 @@
 
     </div>
   </section>
-  
+
   <footer>
     <div class="footer-top">
 
