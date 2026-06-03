@@ -314,13 +314,13 @@ ul li:hover ul {
     width: 100% !important;
     margin-left: 0 !important;
     padding: 10px 15px !important;
+    padding-right: 45px !important; /* AGGIUNTO: Sposta lo switch verso sinistra allontanandolo dal bordo */
     border-top: 1px solid rgba(26, 58, 26, 0.2);
     margin-top: 4px;
     display: flex !important;
-    justify-content: flex-end; /* MODIFICATO: Spinge lo switch tutto a destra */
+    justify-content: space-between;
     align-items: center;
 }
-
 .theme-toggle-item:hover {
     background: transparent !important;
 }
