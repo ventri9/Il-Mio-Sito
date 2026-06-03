@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il mio sito - Lorenzo Ventrice</title>
-  <link href="css/style.css?v=1" rel="stylesheet">
+  <link href="css/style.css?v=2" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://i.ibb.co/gLrB1Wms/logoventri-giusto.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
  </head>
@@ -20,22 +20,23 @@
   
   <nav>
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="hamburger-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
     
-    <!-- Overlay per chiudere il menu cliccando fuori -->
-    <label for="menu-toggle" class="menu-overlay"></label>
-    
-    <div class="mobile-menu-header">
-      <span class="mobile-menu-title">IL MIO SITO</span>
-      <label for="menu-toggle" class="mobile-menu-close">
-        <i class="ti ti-x"></i>
+    <!-- Barra visibile sempre: titolo + hamburger/X -->
+    <div class="mobile-nav-bar">
+      <span class="mobile-nav-title">IL MIO SITO</span>
+      <label for="menu-toggle" class="mobile-nav-toggle">
+        <span class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="close-icon">
+          <i class="ti ti-x"></i>
+        </span>
       </label>
     </div>
     
+    <!-- Menu che si espande SOTTO la barra, spingendo giù il contenuto -->
     <ul>
       <li class="active"><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
       <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
