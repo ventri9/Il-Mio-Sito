@@ -241,60 +241,157 @@ nav {
     .hamburger-icon {
         display: flex;
         order: 1;
+        margin-left: auto;
     }
     
+    /* Configurazione della barra quando il menu è chiuso */
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1a3a1a; /* Tema scuro di default per nav chiusa */
+        border: 4px solid #000000;
+        border-radius: 18px;
+        padding: 12px 20px;
+        margin: 10px auto;
+        width: calc(100% - 20px);
+    }
+
+    /* Testo "IL MIO SITO" visibile in mobile di fianco all'hamburger */
+    nav::before {
+        content: "IL MIO SITO";
+        font-weight: 900;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        color: #90EE90;
+        order: 0;
+    }
+
+    /* Le linee dell'hamburger color verde brillante */
+    .hamburger-icon span {
+        background: #90EE90;
+        width: 24px;
+        height: 3px;
     }
     
+    /* Struttura del menu aperto (Contenitore ad elenco) */
     nav ul {
         display: flex;
         max-height: 0;
         overflow: hidden;
         flex-direction: column;
-        position: static;
-        width: 100%;
-        background: #90EE90;
-        border-radius: 0;
-        gap: 0;
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        width: calc(100% + 8px);
+        background: #1a3a1a; /* Colore di sfondo Tema Scuro */
+        border: 4px solid #000000;
+        border-radius: 18px;
+        gap: 8px;
         transition: max-height 0.3s ease;
         box-sizing: border-box;
-        padding: 0;
+        padding: 0 16px;
+        z-index: 999;
     }
     
+    /* Quando il menu viene aperto tramite checkbox */
     .menu-toggle:checked ~ ul {
         max-height: 500px;
-        padding: 10px 0;
+        padding: 18px 16px;
+    }
+
+    /* Intestazione interna al menu aperto (IL MIO SITO) */
+    nav ul::before {
+        content: "IL MIO SITO";
+        display: block;
+        font-weight: 900;
+        font-size: 16px;
+        color: #90EE90;
+        padding: 4px 0 12px 4px;
     }
     
     nav ul li {
         width: 100%;
-        border-radius: 0;
+        border-radius: 10px;
     }
     
+    /* Stile dei link interni (Non attivi) */
     nav ul li a {
         width: 100%;
-        padding: 12px 15px;
-        border-radius: 0;
-        font-size: 14px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 700;
         display: flex;
         align-items: center;
+        background: transparent;
+        color: #90EE90;
     }
     
     nav ul li a span {
-        margin-left: 8px;
+        margin-left: 12px;
+    }
+
+    /* Voce attiva nel Tema Scuro */
+    nav ul li.active a {
+        background: #90EE90;
+        color: #1a3a1a;
     }
     
+    /* Riga del Tema in fondo al menu */
     .theme-toggle-item {
         width: 100%;
-        padding: 10px 15px;
-        border-radius: 0;
+        padding: 14px 4px 4px 4px;
+        border-top: 1px solid rgba(144, 238, 144, 0.2);
+        margin-top: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #90EE90;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .theme-toggle-item::before {
+        content: "Tema";
+    }
+
+    .theme-switch {
+        margin-left: auto;
+    }
+
+    /* Personalizzazione dello switch */
+    .slider-track {
+        background: #90EE90;
+        width: 52px;
+        height: 26px;
+    }
+
+    .slider-thumb {
+        background: #1a3a1a;
+        width: 26px;
+        height: 26px;
+    }
+
+    .theme-switch input:checked ~ .slider-track {
+        background: #1a3a1a;
+        border: 1px solid #90EE90;
+    }
+
+    .theme-switch input:checked ~ .slider-track .slider-thumb {
+        background: #90EE90;
     }
     
-    /* Animazione hamburger */
+    /* Animazione e trasformazione dell'hamburger nella "X" di chiusura */
+    .menu-toggle:checked ~ .hamburger-icon {
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        z-index: 1000;
+    }
+
     .menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
+        transform: rotate(45deg) translate(5px, 5px);
     }
     
     .menu-toggle:checked ~ .hamburger-icon span:nth-child(2) {
@@ -302,7 +399,58 @@ nav {
     }
     
     .menu-toggle:checked ~ .hamburger-icon span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ===================================================
+       VARIANTE TEMA CHIARO (MOBILE)
+       =================================================== */
+    body:not(.dark-theme) nav {
+        background-color: #1a3a1a;
+    }
+
+    body:not(.dark-theme) .menu-toggle:checked ~ ul {
+        background: #90EE90;
+        border-color: #ffffff;
+    }
+
+    body:not(.dark-theme) nav ul::before {
+        color: #1a3a1a;
+    }
+
+    body:not(.dark-theme) .menu-toggle:checked ~ .hamburger-icon span {
+        background: #1a3a1a;
+    }
+
+    body:not(.dark-theme) nav ul li a {
+        color: #1a3a1a;
+    }
+
+    body:not(.dark-theme) nav ul li.active a {
+        background: #1a3a1a;
+        color: #90EE90;
+    }
+
+    body:not(.dark-theme) .theme-toggle-item {
+        color: #1a3a1a;
+        border-top-color: rgba(26, 58, 26, 0.2);
+    }
+
+    body:not(.dark-theme) .slider-track {
+        background: #1a3a1a;
+    }
+
+    body:not(.dark-theme) .slider-thumb {
+        background: #90EE90;
+    }
+
+    body:not(.dark-theme) .theme-switch input:checked ~ .slider-track {
+        background: #90EE90;
+        border: 1px solid #1a3a1a;
+    }
+
+    body:not(.dark-theme) .theme-switch input:checked ~ .slider-track .slider-thumb {
+        background: #1a3a1a;
     }
 }
 
@@ -582,7 +730,7 @@ article {
     article h1 {
         font-size: 20px;
     }
-    article p {aiz
+    article p {
         font-size: 14px;
         padding: 8px;
     }
