@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il mio sito - Lorenzo Ventrice</title>
-  <link href="css/style.css?v=2" rel="stylesheet">
+    <link href="css/style.css?v=2" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://i.ibb.co/gLrB1Wms/logoventri-giusto.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
- <base target="_blank">
-</head>
+ </head>
  <body>
 
   <header class="site-header"> 
@@ -18,27 +17,22 @@
         <h2>Scopri la magica persona che sono!</h2>
     </div>
   </header>
-
+  
   <nav>
-    <!-- Logo testo per mobile -->
-    <div class="nav-mobile-brand">Il mio sito</div>
-
-    <!-- Checkbox nascosta per toggle hamburger -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-    <!-- Icona hamburger -->
-    <label for="menu-toggle" class="hamburger-icon" aria-label="Apri menu">
+    <label for="menu-toggle" class="hamburger-icon">
       <span></span>
       <span></span>
       <span></span>
     </label>
-
+    <span class="nav-brand">Il mio sito</span>
     <ul>
       <li class="active"><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
       <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
       <li><a href="materie.html"><i class="ti ti-book"></i><span>Materie</span></a></li>
       <li><a href="contatti.html"><i class="ti ti-mail"></i><span>Contatti</span></a></li>
       <li class="theme-toggle-item">
+        <span class="theme-label"><i class="ti ti-palette"></i><span>Tema</span></span>
         <label class="theme-switch" title="Cambia tema">
           <input type="checkbox" id="theme-toggle">
           <span class="slider-track">
@@ -73,9 +67,9 @@
   <aside>
     <div class="calendario-container">
       <div class="calendario-header">
-        <button class="freccia" id="prev-mese">❮</button>
+        <button class="freccia" id="prev-mese">&#10094;</button>
         <h1 id="nome-mese">Gennaio 2026</h1>
-        <button class="freccia" id="next-mese">❯</button>
+        <button class="freccia" id="next-mese">&#10095;</button>
       </div>
       <div class="calendario-giorni-settimana">
         <span>Lun</span><span>Mar</span><span>Mer</span><span>Gio</span><span>Ven</span><span>Sab</span><span>Dom</span>
@@ -88,6 +82,7 @@
     </div>
   </aside>
 
+  <!-- ===== SEZIONE ULTIMI AGGIORNAMENTI ===== -->
   <section class="news-section">
     <div class="news-title">
       <i class="ti ti-news"></i>Ultimi aggiornamenti
@@ -129,7 +124,7 @@
 
     </div>
   </section>
-
+  
   <footer>
     <div class="footer-top">
 
@@ -158,7 +153,7 @@
         <p class="footer-col-title">Contatti</p>
         <div class="footer-contact-row"><i class="ti ti-mail"></i><a href="mailto:ventricelorenzo2@gmail.com">ventricelorenzo2@gmail.com</a></div>
         <div class="footer-contact-row"><i class="ti ti-phone"></i><a href="tel:3701389553">3701389553</a></div>
-        <div class="footer-contact-row"><i class="ti ti-map-pin"></i><a href="https://googleusercontent.com/maps/place/09098+Terralba+OR/@39.7214763,8.6371461,15z/data=!3m1!4b1!4m6!3m5!1s0x12dd8641cb5e70ef:0x3af523fab2f1d8db!8m2!3d39.7185778!4d8.6338041!16zL20vMGdyMTd0?entry=ttu&g_ep=EgoyMDI2MDUyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Terralba, Sardegna</a></div>
+        <div class="footer-contact-row"><i class="ti ti-map-pin"></i><a href="https://www.google.com/maps/place/09098+Terralba+OR/@39.7214763,8.6371461,15z/data=!3m1!4b1!4m6!3m5!1s0x12dd8641cb5e70ef:0x3af523fab2f1d8db!8m2!3d39.7185778!4d8.6338041!16zL20vMGdyMTd0?entry=ttu&g_ep=EgoyMDI2MDUyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Terralba, Sardegna</a></div>
       </div>
 
       <div class="footer-col">

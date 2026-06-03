@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materie - Lorenzo Ventrice</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/materie.css" rel="stylesheet">
-    <link href="css/portfolio.css" rel="stylesheet">
+    <link href="css/style.css?v=2" rel="stylesheet">
+    <link href="css/materie.css?v=2" rel="stylesheet">
+    <link href="css/portfolio.css?v=2" rel="stylesheet">
     <link class="progetto-info" rel="icon" type="image/png" href="logoventri_giusto.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
@@ -23,35 +23,30 @@
     </header>
 
     <nav>
-        <!-- Logo testo per mobile -->
-        <div class="nav-mobile-brand">Il mio sito</div>
-
-        <!-- Checkbox nascosta per toggle hamburger -->
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-        <!-- Icona hamburger -->
-        <label for="menu-toggle" class="hamburger-icon" aria-label="Apri menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        </label>
-
+              <label for="menu-toggle" class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+              <span class="nav-brand">Il mio sito</span>
         <ul>
-        <li class="active"><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
-        <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
-        <li><a href="materie.html"><i class="ti ti-book"></i><span>Materie</span></a></li>
-        <li><a href="contatti.html"><i class="ti ti-mail"></i><span>Contatti</span></a></li>
-        <li class="theme-toggle-item">
-            <label class="theme-switch" title="Cambia tema">
-            <input type="checkbox" id="theme-toggle">
-            <span class="slider-track">
-                <span class="slider-thumb">
-                <span class="icon-sun">☀️</span>
-                <span class="icon-moon">🌙</span>
+            <li><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
+            <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
+            <li class="active"><a href="materie.html"><i class="ti ti-book"></i><span>Materie</span></a></li>
+            <li><a href="contatti.html"><i class="ti ti-mail"></i><span>Contatti</span></a></li>
+            <li class="theme-toggle-item">
+              <span class="theme-label"><i class="ti ti-palette"></i><span>Tema</span></span>
+              <label class="theme-switch" title="Cambia tema">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider-track">
+                  <span class="slider-thumb">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                  </span>
                 </span>
-            </span>
-            </label>
-        </li>
+              </label>
+            </li>
         </ul>
     </nav>
 
@@ -74,8 +69,8 @@
                     <h2>Media Totale</h2>
                     <span class="categoria">Riepilogo Generale Andamento Scolastico</span>
 
-                    <div class="voto-container" style="--voto: 81.7%;">
-                        <div class="testo-voto">Media Generale: <strong>8.17</strong></div>
+                    <div class="voto-container" style="--voto: 79.2%;">
+                        <div class="testo-voto">Media Generale: <strong>7.92</strong></div>
                         <div class="barra-gradiente">
                             <div class="pallino-voto"></div>
                         </div>
@@ -87,11 +82,11 @@
                     <div class="records-medie">
                         <div class="singolo-record">
                             <span class="etichetta-record">Media più alta:</span>
-                            <strong class="valore-record testo-verde">9.33 <span class="materia-record">(Inglese)</span></strong>
+                            <strong class="valore-record testo-verde">9.04 <span class="materia-record">(Inglese)</span></strong>
                         </div>
                         <div class="singolo-record">
                             <span class="etichetta-record">Media più bassa:</span>
-                            <strong class="valore-record testo-verde-chiaro">6.50 <span class="materia-record">(Italiano)</span></strong>
+                            <strong class="valore-record testo-verde-chiaro">6.39 <span class="materia-record">(Italiano)</span></strong>
                         </div>
                     </div>
                 </div>
@@ -107,8 +102,8 @@
                     <h3>Italiano</h3>
                     <span class="categoria">Prof. Maria Luisa Martini</span>
 
-                    <div class="voto-container" style="--voto: 65.0%;">
-                        <div class="testo-voto">Media: <strong>6.50</strong></div>
+                    <div class="voto-container" style="--voto: 63.9%;">
+                        <div class="testo-voto">Media: <strong>6.39</strong></div>
                         <div class="barra-gradiente">
                             <div class="pallino-voto"></div>
                         </div>
@@ -121,15 +116,6 @@
                         <summary class="freccia-voti">Visualizza Voti</summary>
                         <div class="wrapper-animazione">
                             <div class="lista-voti">
-                                <div class="singolo-voto">
-                                    <div class="badge-voto voto-verde">
-                                        <span class="numero-voto">8-</span>
-                                        <span class="tipo-voto">Scritto</span>
-                                    </div>
-                                    <div class="info-voto">
-                                        <span class="descrizione-voto">Compito in classe (Dante).</span>
-                                    </div>
-                                </div>
                                 <div class="singolo-voto">
                                     <div class="badge-voto voto-verde">
                                         <span class="numero-voto">6</span>
@@ -245,8 +231,8 @@
                     <h3>Storia</h3>
                     <span class="categoria">Prof. Maria Luisa Martini</span>
 
-                    <div class="voto-container" style="--voto: 77.6%;">
-                        <div class="testo-voto">Media: <strong>7.76</strong></div>
+                    <div class="voto-container" style="--voto: 77.1%;">
+                        <div class="testo-voto">Media: <strong>7.71</strong></div>
                         <div class="barra-gradiente">
                             <div class="pallino-voto"></div>
                         </div>
@@ -259,15 +245,6 @@
                         <summary class="freccia-voti">Visualizza Voti</summary>
                         <div class="wrapper-animazione">
                             <div class="lista-voti">
-                                <div class="singolo-voto">
-                                    <div class="badge-voto voto-verde">
-                                        <span class="numero-voto">8</span>
-                                        <span class="tipo-voto">Orale</span>
-                                    </div>
-                                    <div class="info-voto">
-                                        <span class="descrizione-voto">Le scoperte geografiche.</span>
-                                    </div>
-                                </div>
                                 <div class="singolo-voto">
                                     <div class="badge-voto voto-verde">
                                         <span class="numero-voto">8-</span>
@@ -352,15 +329,6 @@
                         <summary class="freccia-voti">Visualizza Voti</summary>
                         <div class="wrapper-animazione">
                             <div class="lista-voti">
-                                <div class="singolo-voto">
-                                    <div class="badge-voto voto-verde">
-                                        <span class="numero-voto">7.5</span>
-                                        <span class="tipo-voto">Orale</span>
-                                    </div>
-                                    <div class="info-voto">
-                                        <span class="descrizione-voto">Strutture e vettori di strutture.</span>
-                                    </div>
-                                </div>
                                 <div class="singolo-voto">
                                     <div class="badge-voto voto-verde">
                                         <span class="numero-voto">6</span>
@@ -578,8 +546,8 @@
                     <h3>Sistemi e Reti</h3>
                     <span class="categoria">Prof. Leonardo Callia e Enrico Piredda (LAB)</span>
 
-                    <div class="voto-container" style="--voto: 73.9%;">
-                        <div class="testo-voto">Media: <strong>7.39</strong></div>
+                    <div class="voto-container" style="--voto: 71.1%;">
+                        <div class="testo-voto">Media: <strong>7.11</strong></div>
                         <div class="barra-gradiente">
                             <div class="pallino-voto"></div>
                         </div>
@@ -592,24 +560,6 @@
                         <summary class="freccia-voti">Visualizza Voti</summary>
                         <div class="wrapper-animazione">
                             <div class="lista-voti">
-                                <div class="singolo-voto">
-                                    <div class="badge-voto voto-verde">
-                                        <span class="numero-voto">8.5</span>
-                                        <span class="tipo-voto">Scritto</span>
-                                    </div>
-                                    <div class="info-voto">
-                                        <span class="descrizione-voto">Le reti: livello fisico e di data-link, codifiche dei bit, protocollo ethernet, topologie fisiche e logiche.</span>
-                                    </div>
-                                </div>
-                                <div class="singolo-voto">
-                                    <div class="badge-voto voto-verde">
-                                        <span class="numero-voto">8</span>
-                                        <span class="tipo-voto">Scritto</span>
-                                    </div>
-                                    <div class="info-voto">
-                                        <span class="descrizione-voto">Sistemi operativi: Kernel e politiche di scheduling.</span>
-                                    </div>
-                                </div>
                                 <div class="singolo-voto">
                                     <div class="badge-voto voto-verde">
                                         <span class="numero-voto">8.5</span>
