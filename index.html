@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il mio sito - Lorenzo Ventrice</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css?v=1" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://i.ibb.co/gLrB1Wms/logoventri-giusto.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
  </head>
@@ -25,12 +25,24 @@
       <span></span>
       <span></span>
     </label>
+    
+    <!-- Overlay per chiudere il menu cliccando fuori -->
+    <label for="menu-toggle" class="menu-overlay"></label>
+    
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">IL MIO SITO</span>
+      <label for="menu-toggle" class="mobile-menu-close">
+        <i class="ti ti-x"></i>
+      </label>
+    </div>
+    
     <ul>
       <li class="active"><a href="index.html"><i class="ti ti-home"></i><span>Home</span></a></li>
       <li><a href="portfolio.html"><i class="ti ti-briefcase"></i><span>Portfolio</span></a></li>
       <li><a href="materie.html"><i class="ti ti-book"></i><span>Materie</span></a></li>
       <li><a href="contatti.html"><i class="ti ti-mail"></i><span>Contatti</span></a></li>
       <li class="theme-toggle-item">
+        <span class="theme-label">Tema</span>
         <label class="theme-switch" title="Cambia tema">
           <input type="checkbox" id="theme-toggle">
           <span class="slider-track">
